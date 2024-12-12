@@ -1,0 +1,45 @@
+.titleline {
+  display: flex;
+  align-items: center;
+  column-gap: .8rem;
+  font-size: 2.8rem;
+  font-weight: 300;
+  line-height: 1.2;
+  &::before, &::after {
+    content: '';
+    display: block;
+    width: 2.4rem;
+    height: .1rem;
+    margin-top: .2rem;
+    background-color: rgba(#000, $alpha: .3);
+  }
+  > p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /** Size Properties **/
+  &--small {
+    font-size: 1.6rem;
+    font-weight: 400;
+    &::before, &::after {
+      width: 1.6rem;
+    }
+  }
+
+  /** MEDIA **/
+  @media (max-width: 991px) {
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    &--small {
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 575px) {
+    &--small {
+      font-size: 1.4rem;
+    }
+  }
+}
